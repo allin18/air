@@ -1,0 +1,16 @@
+{
+  "label": "小游戏 - 接入",
+  "position": 1,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "大苏打实打实的撒大苏打撒旦撒旦",
+    "description": "大苏打实打实的撒大苏打撒旦撒旦",
+    "slug": "xxxxxxxxxxxxxxxxxxx",
+    "keywords": "xxxxxxxxxxxxxxxxxxx",
+    "image": "/img/logo.png"
+  },
+  "customProps": {
+    "description": "descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription"
+  }
+}

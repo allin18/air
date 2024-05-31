@@ -1,0 +1,31 @@
+.my-home-header {
+  background-image: url('../../static/img/curves.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #f5f5fa;
+  height: 800px;
+}
+
+.my-home-header.hero--primary {
+  --ifm-hero-text-color: #333;
+}
+
+.my-button-white {
+  transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+  will-change: box-shadow, transform;
+  background: rgb(252, 252, 253);
+  box-shadow: rgba(45, 35, 66, 0.4) 0px 2px 4px, rgba(45, 35, 66, 0.3) 0px 7px 13px -3px, rgb(214, 214, 231) 0px -3px 0px inset;
+  min-width: 200px;
+  border: none !important;
+}
+.my-button {
+  transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, rgb(90, 218, 255) 0%, rgb(84, 104, 255) 100%);
+  box-shadow: rgba(45, 35, 66, 0.4) 0px 2px 4px, rgba(45, 35, 66, 0.3) 0px 7px 13px -3px, rgba(58, 65, 111, 0.5) 0px -3px 0px inset;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 0px;
+  min-width: 200px;
+  color: #fff !important;
+  border: none !important;
+}

@@ -1,0 +1,15 @@
+{
+  "label": "入门指引",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "title",
+    "description": "description",
+    "slug": "intro",
+    "keywords": "intro",
+    "image": "/img/logo.png"
+  },
+  "customProps": {
+    "description": "customProps.description ???"
+  }
+}
