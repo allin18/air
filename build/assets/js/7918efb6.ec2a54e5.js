@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkair_docs=self.webpackChunkair_docs||[]).push([[297],{6277:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/air/blog/tags/hola","allTagsPath":"/air/blog/tags","count":1,"unlisted":false}')}}]);
