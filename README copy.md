@@ -15,4 +15,3 @@ https://lzwdot.com/ https://github.com/lzwdot/docusaurus
 https://docs.scriptcat.org/ https://github.com/scriptscat/scriptcat
 
 ### 开发日志
-https://sdk-team.feishu.cn/wiki/XAmpwdxUOipi2RkpFuxcqgZ4nlc

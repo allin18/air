@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "github-pages": "git subtree push --prefix build origin gh-pages",
     "docusaurus": "docusaurus",
     "start": "docusaurus start --host 0.0.0.0 --no-open",
     "start-10.235.80.17": "docusaurus start --host 10.235.80.17",
