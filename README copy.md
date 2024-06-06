@@ -15,3 +15,5 @@ https://lzwdot.com/ https://github.com/lzwdot/docusaurus
 https://docs.scriptcat.org/ https://github.com/scriptscat/scriptcat
 
 ### 开发日志
+https://optipng.sourceforge.net/
+https://github.com/WangXuan95/TinyPNG-kmeans
