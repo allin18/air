@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkair_docs=self.webpackChunkair_docs||[]).push([[931],{8423:s=>{s.exports=JSON.parse('{"permalink":"/air/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

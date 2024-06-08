@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkair_docs=self.webpackChunkair_docs||[]).push([[7775],{8628:e=>{e.exports=JSON.parse('{"permalink":"/air/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

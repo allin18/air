@@ -1,0 +1,13 @@
+.page{
+  @import "normalize";
+
+  .col {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+}

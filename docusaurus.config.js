@@ -11,6 +11,7 @@ import PrismDark from './src/utils/prismDark.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  trailingSlash: false, // ===================================================================删除 URL/链接末尾的斜杠 !!!!!
   title: 'air API文档中心',
   tagline: '描述描述描述描述描述',
   // favicon: 'img/favicon.ico',
@@ -79,7 +80,7 @@ const config = {
         title: 'air文档中心',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -158,12 +159,14 @@ const config = {
         darkTheme: PrismDark,
         additionalLanguages: ['java', 'csharp', 'json'], // 'batch', 'powershell', 'bash',
       },
-      announcementBar: {
-        id: 'announcementBar-v3.2', // Increment on change
-        // content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
-        content: `🎉️ <b><a target="_blank" href="https://docusaurus.io/blog/releases/3.2">air v1.0</a> 发布啦!</b> 🥳️`,
-      },
+      // announcementBar: {
+      //   id: 'announcementBar-v3.2', // Increment on change
+      //   // content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter ${TwitterSvg}</a>`,
+      //   content: `🎉️ <b><a target="_blank" href="https://docusaurus.io/blog/releases/3.2">air v1.0</a> 发布啦!</b> 🥳️`,
+      // },
     }),
+
+  plugins: ['docusaurus-plugin-sass'],
 };
 
 export default config;

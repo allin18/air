@@ -1,0 +1,260 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 35px 62px;
+  background-color: #000;
+  color: #FFFEFE;
+  > div:first-child {
+    display: flex;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    > img {
+      width: 38px;
+      margin-right: 8px;
+    }
+  }
+  > ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    display: flex;
+
+    font-size: 14px;
+    font-weight: bold;
+    > li {
+      margin-right: 32px;
+    }
+  }
+  >div:last-child {
+    display: flex;
+    align-items: center;
+    >div{
+      margin-right: 16px;
+      position: relative;
+      >img{
+        width: 40px;
+      }
+      >span{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+      }
+    }
+  }
+}
+
+.homeButton {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  width: 104px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.contentWidth {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.contentBlack {
+  background-color: #000;
+  color: #fff;
+}
+
+.contentBanner {
+  height: 230px;
+
+  > h3 {
+    padding-top: 50px;
+
+    > b {
+      font-size: 35px;
+    }
+
+    font-size: 21.5px;
+    font-weight: bold;
+  }
+
+  > p {
+    color: #C9C9C9;
+  }
+
+  > button {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    height: 35px;
+    padding: 0px 8px;
+    margin-top: 50px;
+  }
+}
+
+.contentCovert {
+  // height: 350px;
+  padding: 50px 0;
+
+  > div {
+    width: 100%;
+    background: #222222;
+    border-radius: 9px;
+    padding: 50px;
+
+    > h3 {
+      font-size: 22px;
+      font-weight: bold;
+      padding: 0 0 30px;
+    }
+
+    > div {
+      padding: 50px 0;
+      width: 100%;
+      background: #000000;
+      border-radius: 9px;
+      border: 3px solid #FFFFFF;
+
+      > button {
+        margin-bottom: 20px;
+        width: 200px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        border: 0;
+        color: #000;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.contentGrey {
+  background-color: #F9F9F9;
+  color: #000;
+}
+.contentIntro {
+  padding: 50px  150px;
+  > h3 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  > p {
+    padding: 20px 0 50px;
+  }
+
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+      width: calc(50% - 100px);
+      margin-right: 100px;
+      padding-bottom: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 2) {
+        padding-bottom: 0;
+      }
+      >div{
+        padding: 30px;
+        background: #FFFFFF;
+        box-shadow: 2px 0 25px 0 #000000;
+        border-radius: 10px;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 17px;
+          font-weight: bold;
+          > img {
+            width: 123px;
+          }
+          margin-bottom: 20px;
+
+        }
+      }
+    }
+  }
+}
+
+.contentShowImage {
+  padding: 50px 0;
+
+  height: 500px;
+  background-color: #1a68d3;
+  background-image: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%), linear-gradient(136deg, transparent, #71c7ee 290%), linear-gradient(115deg, #9d9af1, transparent 40%), linear-gradient(180deg, transparent 0, #1a68d3 70%), radial-gradient(ellipse at -70% -180%, transparent 80%, #71c7ee 0), radial-gradient(ellipse at bottom, #1a68d3 40%, transparent 80%), radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
+
+  > h3 {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 0 30px;
+  }
+}
+
+.contentOptimize {
+  // height: 350px;
+  padding: 50px 0;
+
+  > div {
+    width: 100%;
+    background: #222222;
+    border-radius: 9px;
+    padding: 50px;
+
+    > h3 {
+      font-size: 22px;
+      font-weight: bold;
+      padding: 0 0 30px;
+    }
+    >p{
+      padding-bottom: 30px;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      >img{
+        width: 50px;
+      }
+      >input{
+        padding-left: 50px;
+        height: 40px;
+      }
+      > button {
+        width: 200px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        border: 0;
+        color: #000;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.contentBlack222 {
+  background-color: #222222;
+  color: #fff;
+}
+
+.contentCount {
+  padding: 20px 0;
+  >li{
+    flex: 1;
+    font-size: 12px;
+    color: #727272;
+    span{
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFFFFF;
+      margin: 0 8px;
+    }
+  }
+}

@@ -7,7 +7,7 @@
     "description": "description",
     "slug": "intro",
     "keywords": "intro",
-    "image": "/img/logo.png"
+    "image": "/img/logo.s"
   },
   "customProps": {
     "description": "customProps.description ???"
