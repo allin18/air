@@ -353,6 +353,9 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  //font-family: Times, "Times New Roman", Georgia, serif; /* 衬线 */
+  //font-family: Verdana, Arial, Helvetica, sans-serif;    /* 无衬线 */
+  font-family: "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
 }
 ul {
   list-style: none !important;
