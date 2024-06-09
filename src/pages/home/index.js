@@ -70,27 +70,26 @@ export default function Home() {
             <ul>
               <li>
                 <div>
-                  <div><img src="images/home/支持各种文件格式icon.svg" alt=""/>支持各种文件格式</div>
-                  我们支持不同的文件格式间多种不同的灵活转换方式，包括对图像和文件的无损压缩转换等图像后期在线处理功能 。
+                  <div><img src="images/home/支持各种文件格式icon.svg" alt="" width="123px"/>支持各种文件格式</div>
+                  <p>我们支持不同的文件格式间多种不同的灵活转换方式，包括对图像和文件的无损压缩转换等图像后期在线处理功能 。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/支持所有设备icon.svg" alt=""/>支持所有设备</div>
-                  Turbulence基于浏览器并支持所有平台。您无需下载与安装任何软件。
+                  <div><img src="images/home/支持所有设备icon.svg" alt="" width="126px"/>支持所有设备</div>
+                  <p>Turbulence基于浏览器并支持所有平台。您无需下载与安装任何软件。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/云端处理icon.svg" alt=""/>云端处理</div>
-                  所有转换都在云端进行，不会消耗您计算机的资源。
+                  <div><img src="images/home/云端处理icon.svg" alt="" width="107px"/>云端处理</div>
+                  <p>所有转换都在云端进行，不会消耗您计算机的资源。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/安全保障icon.svg" alt=""/>安全保障</div>
-                  我们将立即删除已上传的文件，并在 24 小时后删除已转换的文件。任何人都无法访问您的文件，我们可确保您的隐私
-                  100%安全。
+                  <div><img src="images/home/安全保障icon.svg" alt="" width="129px"/>安全保障</div>
+                  <p>我们将立即删除已上传的文件，并在 24 小时后删除已转换的文件。任何人都无法访问您的文件，我们可确保您的隐私100%安全。</p>
                 </div>
               </li>
             </ul>
