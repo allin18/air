@@ -23,9 +23,19 @@ export class BeerSlider {
             min: '0',
             max: '100'
         })
-        this.handle = this.addElement('span', {
+        // =========================================================================================================修改
+        // this.handle = this.addElement('span', {
+        //     class: `${this.prefix}-handle`
+        // })
+        const divEl = this.addElement('div', {
             class: `${this.prefix}-handle`
         })
+        const spanEl = document.createElement('span');
+        spanEl.setAttribute('class', `${this.prefix}-handle-center`)
+        divEl.appendChild(spanEl)
+
+        this.handle = divEl;
+        // ==========================================================================================================
         this.onImagesLoad()
     }
     init () {
@@ -82,8 +92,17 @@ export class BeerSlider {
         window.addEventListener('resize', () => {this.setImgWidth()})
     }
     move () {
-        this.revealContainer.style.width = `${this.range.value}%`
-        this.handle.style.left = `${this.range.value}%`
+        // =========================================================================================================修改
+        if(this.range.value >= 50){
+            this.revealContainer.style.width = `${this.range.value}%`
+            this.handle.style.left = `${this.range.value}%`
+            this.handle.style.right = `auto`
+        }else{
+            this.revealContainer.style.width = `${this.range.value}%`
+            this.handle.style.left = `auto`
+            this.handle.style.right = `${100 - this.range.value}%`
+        }
+        // =========================================================================================================
         this.range.setAttribute('aria-valuenow', this.range.value)
     }
 }

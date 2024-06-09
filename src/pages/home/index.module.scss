@@ -1,9 +1,20 @@
+
+
+.contentBlack141414 {
+  background-color: #141414;
+  color: #fff;
+}
+.contentWidth1920 {
+  width: 1920px;
+  margin: 0 auto;
+}
 .header {
   display: flex;
   align-items: center;
-  padding: 35px 62px;
-  background-color: #141414;
+  padding: 0 62px;
   color: #FFFEFE;
+  height: 130px;
+  position: relative;
   > div:first-child {
     display: flex;
     align-items: center;
@@ -13,11 +24,12 @@
     font-style: italic;
     > img {
       width: 60px;
-      margin-right: 16px;
+      margin-right: 20px;
     }
-    margin-right: 50px;
+    margin-right: 58px;
   }
   > ul {
+    height: 100%;
     flex: 1;
     list-style: none;
     margin: 0;
@@ -26,7 +38,60 @@
     font-size: 28px;
     font-weight: bold;
     > li {
+      cursor: pointer;
+      height: 100%;
       margin-right: 50px;
+      display: flex;
+      align-items: center;
+      >img{
+        width: 19px;
+        margin-left: 8px;
+      }
+      &:last-child {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      &:hover div{
+        visibility: visible;
+        opacity: 1;
+      }
+      >div{
+        transition: all 0.8s ease;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 130px;
+        width: 100%;
+        z-index: 1;
+        height: 100px;
+        background-color: rgba(33, 33, 33, 0.2);
+        //background-color: red;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        padding-left: 240px;
+        display: flex;
+        visibility: hidden;
+        &:hover a{
+          background-color: transparent !important;
+        }
+        >a{
+          height: 100%;
+          border-radius: 50px;
+          width: 360px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fffefe;
+          font-weight: normal;
+          text-decoration: none;
+          font-size: 30px;
+          &.on{
+            background-color: rgba(255, 255, 255, 0.15);
+          }
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.15) !important;
+          }
+        }
+      }
     }
   }
   >div:last-child {
@@ -54,7 +119,7 @@
 
 button.homeButton {
   border: 2px solid #FFFFFF;
-  border-radius: 22px;
+  border-radius: 12px;
   color: #FFFFFF;
   background-color: transparent;
   padding: 0 28px;
@@ -93,10 +158,12 @@ button.homeButton {
     height: 100%;
     top: 0;
     left: 0;
+    padding-left: 54px;
     > h3 {
-      padding-top: 50px;
+      padding-top: 100px;
 
       > b {
+        line-height: 1;
         font-size: 70px;
       }
 
@@ -105,18 +172,20 @@ button.homeButton {
     }
 
     > p {
-      margin-top: 30px;
+      margin-top: 45px;
+      line-height: 1;
       font-size: 20px;
       color: #C9C9C9;
     }
 
     > button {
+      margin-left: 12px;
       border: 2px solid #fff;
       border-radius: 22px;
       background-color: transparent;
       color: #fff;
       padding: 0 8px;
-      margin-top: 70px;
+      margin-top: 73px;
       font-size: 28px;
       width: 110px;
       height: 72px;
@@ -135,7 +204,7 @@ button.homeButton {
   > div {
     width: 100%;
     background: #222222;
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 50px 120px 120px;
 
     > h3 {
@@ -148,13 +217,13 @@ button.homeButton {
       padding: 60px 0 40px;
       width: 100%;
       background: #000000;
-      border-radius: 20px;
+      border-radius: 18px;
       border: 3px solid #FFFFFF;
 
       > button {
         width: 400px;
         height: 120px;
-        border-radius: 10px;
+        border-radius: 18px;
         background-color: #FFFFFF;
         border: 0;
         color: #000;
@@ -189,6 +258,7 @@ button.homeButton {
 
   > p {
     font-size: 30px;
+    text-align: center;
   }
 
   > ul {
@@ -213,19 +283,28 @@ button.homeButton {
         > div {
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: start;
           font-size: 34px;
           font-weight: bold;
-          height: 174px;
-          padding: 46px 60px 0;
+          height: 178px;
+          padding: 0 60px 0;
           > img {
-            width: 126px;
+            display: block;
+            margin-left: 13px;
           }
-          margin-bottom: 40px;
+          >span{
+            padding-top: 85px;
+            line-height: 1;
+          }
         }
         font-size: 22px;
         >p{
           padding: 0 60px 0;
+          color: #323232;
+        }
+        cursor: pointer;
+        &:hover{
+          background-color: #f5fbff;
         }
       }
     }
@@ -239,6 +318,7 @@ button.homeButton {
   }
   >p{
     font-size: 24px;
+    color: #424242;
   }
   >div{
     position: relative;
@@ -355,10 +435,9 @@ button.homeButton {
       >img{
         width: 20px;
         height: 20px;
-        background-color: #000000;
       }
       &:hover{
-        background: linear-gradient(to right, rgba(59,110,255, .0), rgba(59,110,255, .2));
+        background: linear-gradient(to right, rgba(59,110,255, .03), rgba(59,110,255, .2));
       }
     }
 
@@ -372,7 +451,6 @@ button.homeButton {
       margin-left: 10px;
       width: 20px;
       height: 20px;
-      background-color: #000000;
     }
   }
 }

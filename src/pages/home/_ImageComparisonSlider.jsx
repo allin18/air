@@ -15,13 +15,13 @@ function ImageComparisonSlider() {
 
     const sliderStyle = {
         borderRadius: 50,
-        backgroundColor: '#333',
         overflow: 'hidden',
+        display: 'block',
     };
 
     return (
         <div id="slider" className="beer-slider" data-beer-label="before" style={sliderStyle}>
-            <img src="images/home/banner.jpg" alt=""/>
+            <img src="images/home/diff.png" alt=""/>
             <div className="beer-reveal" data-beer-label="after">
                 <img src="images/home/diff.png" alt=""/>
             </div>

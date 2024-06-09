@@ -15,28 +15,48 @@ export default function Home() {
 
   return (
       <div className="page">
-        <div className={styles.header}>
-          <div>
-            <img src="img/logo.svg"/>
-            Turbulence
-          </div>
-          <ul>
-            <li>压缩</li>
-            <li>转换</li>
-            <li>OCR</li>
-            <li>API</li>
-            <li>定价</li>
-            <li>支持</li>
-          </ul>
-          <div>
+        <div className={styles.contentBlack141414}>
+          <div className={clsx(styles.header, styles.contentWidth1920)}>
             <div>
-              <img src="images/home/文件夹icon.svg"/>
-              <span>66</span>
+              <img src="img/logo.svg"/>
+              Turbulence
             </div>
+            <ul>
+              <li>
+                压缩
+                <img src="images/home/下拉箭头1.svg" alt=""/>
+                <div>
+                  <a className={styles.on} href="">图像压缩</a>
+                  <a href="">视频压缩</a>
+                  <a href="">文件压缩</a>
+                  <a href="">音频压缩</a>
+                </div>
+              </li>
+              <li>
+                转换
+                <img src="images/home/下拉箭头1.svg" alt=""/>
+                <div>
+                  <a className={styles.on} href="">文档转换</a>
+                  <a href="">图像转换</a>
+                  <a href="">视频转换</a>
+                  <a href="">音频转换</a>
+                </div>
+              </li>
+              <li>OCR</li>
+              <li>API</li>
+              <li>定价</li>
+              <li>支持</li>
+            </ul>
             <div>
-              <img src="images/home/语言icon.svg"/>
+              <div>
+                <img src="images/home/文件夹icon.svg"/>
+                <span>66</span>
+              </div>
+              <div>
+                <img src="images/home/语言icon.svg"/>
+              </div>
+              <button className={styles.homeButton}>登录</button>
             </div>
-            <button className={styles.homeButton}>登录</button>
           </div>
         </div>
         <div className={styles.contentBlack}>
@@ -70,25 +90,37 @@ export default function Home() {
             <ul>
               <li>
                 <div>
-                  <div><img src="images/home/支持各种文件格式icon.svg" alt="" width="123px"/>支持各种文件格式</div>
+                  <div>
+                    <img src="images/home/支持各种文件格式icon.svg" alt="" width="123px" style={{marginTop: 46}}/>
+                    <span>支持各种文件格式</span>
+                  </div>
                   <p>我们支持不同的文件格式间多种不同的灵活转换方式，包括对图像和文件的无损压缩转换等图像后期在线处理功能 。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/支持所有设备icon.svg" alt="" width="126px"/>支持所有设备</div>
+                  <div>
+                    <img src="images/home/支持所有设备icon.svg" alt="" width="126px" style={{marginTop: 40}}/>
+                    <span>支持所有设备</span>
+                  </div>
                   <p>Turbulence基于浏览器并支持所有平台。您无需下载与安装任何软件。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/云端处理icon.svg" alt="" width="107px"/>云端处理</div>
+                  <div>
+                    <img src="images/home/云端处理icon.svg" alt="" width="107px" style={{marginTop: 55}}/>
+                    <span>云端处理</span>
+                  </div>
                   <p>所有转换都在云端进行，不会消耗您计算机的资源。</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div><img src="images/home/安全保障icon.svg" alt="" width="129px"/>安全保障</div>
+                  <div>
+                    <img src="images/home/安全保障icon.svg" alt="" width="129px" style={{marginTop: 56}}/>
+                    <span>安全保障</span>
+                  </div>
                   <p>我们将立即删除已上传的文件，并在 24 小时后删除已转换的文件。任何人都无法访问您的文件，我们可确保您的隐私100%安全。</p>
                 </div>
               </li>
@@ -103,9 +135,10 @@ export default function Home() {
           <p>拖动滑块，您可以将压缩前后的图像进行比较,令人惊奇的是文件大小减少了85%以上！</p>
           <h6 style={{height: 100}}></h6>
           <div>
+
             <ImageComparisonSlider></ImageComparisonSlider>
-            <span>BEFORE<em>1.5MB</em></span>
-            <span>AFTER<em>210KB</em></span>
+            {/*<span>BEFORE<em>1.5MB</em></span>*/}
+            {/*<span>AFTER<em>210KB</em></span>*/}
           </div>
           <h6 style={{height: 170}}></h6>
         </div>
@@ -141,23 +174,23 @@ export default function Home() {
             <ul>
               <li>
                 turbulence的用途是什么？
-                <img src="" alt=""/>
+                <img src="images/home/问答下拉箭头.svg" alt=""/>
               </li>
               <li>
                 turbulence的用途是什么？
-                <img src="" alt=""/>
+                <img src="images/home/问答下拉箭头.svg" alt=""/>
               </li>
               <li>
                 turbulence的用途是什么？
-                <img src="" alt=""/>
+                <img src="images/home/问答下拉箭头.svg" alt=""/>
               </li>
               <li>
                 turbulence的用途是什么？
-                <img src="" alt=""/>
+                <img src="images/home/问答下拉箭头.svg" alt=""/>
               </li>
             </ul>
             <h6 style={{height: 40}}></h6>
-            <h4>查看更多 <img src="" alt=""/></h4>
+            <h4>查看更多 <img src="images/home/问答下拉箭头.svg" alt=""/></h4>
             <h6 style={{height: 45}}></h6>
           </div>
         </div>
