@@ -11,11 +11,14 @@ import PrismDark from './src/utils/prismDark.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  scripts: [
+    'https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js',
+  ],
   trailingSlash: false, // ===================================================================删除 URL/链接末尾的斜杠 !!!!!
   title: 'air API文档中心',
   tagline: '描述描述描述描述描述',
   // favicon: 'img/favicon.ico',
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',

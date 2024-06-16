@@ -1,15 +1,113 @@
 @import "theme";
+@import "@arco-design/web-react/dist/css/arco.css";
 
-.page{
-  @import "normalize";
+:root {
+  --page-text-FFF: #FFFFFF;
+  --page-text-404040: #404040;
+  --page-text-262626: #262626;
+  --page-text-323232: #323232;
+  --page-text-808080: #808080; // 手机号注册
+  --page-text-b2b1b1: #b2b1b1; // 注册 或
+  --page-text-placeholder: #a6a6a6;
+
+  --page-input-icon: #8d8d8d;
+  --page-input-bg-code: #f2f2f2;
+  --page-input-bg-code-btn-bg: #dcdcdc;
+  --page-btn-disabled: #bfbfbf;
+  --page-checkbox-000: #000000;
+
+  --page-bg-000: #000000;
+
+  --page-border-b2b2b2: #b2b2b2;
+
+  --page-modal-close: #404040;
+
+  --linear-gradient-image: linear-gradient(to top, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0));
+  --bg-img-2: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4)), linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.4));
+}
+
+:root[theme='dark'] {
+}
+
+.myPageHtmlClassName {
+  @import "normalize"; // 只支持scss
+
+  min-width: max-content; // 重要 不然page只是屏幕的宽
 
   .col {
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    > * {
+      // 保证子元素 宽高不缩放 也可以遵循子元素大小的固定值
+      flex-grow: 0; // 弹性增长因子
+      flex-shrink: 0; // 弹性收缩因子
+      flex-basis: auto; // 弹性元素尺寸 auto 显式定义宽度或高度生效
+    }
   }
+
   .row {
     display: flex;
     justify-content: center;
+
+    > * {
+      // 保证子元素 宽高不缩放 也可以遵循子元素大小的固定值
+      flex-grow: 0; // 弹性增长因子
+      flex-shrink: 0; // 弹性收缩因子
+      flex-basis: auto; // 弹性元素尺寸 auto 显式定义宽度或高度生效
+    }
+  }
+
+  .myCol {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    > * {
+      // 保证子元素 宽高不缩放 也可以遵循子元素大小的固定值
+      flex-grow: 0; // 弹性增长因子
+      flex-shrink: 0; // 弹性收缩因子
+      flex-basis: auto; // 弹性元素尺寸 auto 显式定义宽度或高度生效
+    }
+  }
+
+  .myRow {
+    display: flex;
+    justify-content: center;
+
+    > * {
+      // 保证子元素 宽高不缩放 也可以遵循子元素大小的固定值
+      flex-grow: 0; // 弹性增长因子
+      flex-shrink: 0; // 弹性收缩因子
+      flex-basis: auto; // 弹性元素尺寸 auto 显式定义宽度或高度生效
+    }
+  }
+
+  .myCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .w-1440 {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .w-1280 {
+    //width: 1280px;
+    width: 1320px;
+    margin: 0 auto;
+  }
+
+  .w-1000 {
+    //width: 1280px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  input::placeholder {
+    color: var(--page-text-placeholder);
   }
 }

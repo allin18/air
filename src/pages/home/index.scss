@@ -1,0 +1,46 @@
+.contentFAQ{
+  width: 100%;
+  padding-right: 301px;
+  .arco-collapse{
+    width: 100%;
+  }
+  .arco-collapse-item{
+    width: 100%;
+    border: 1px solid #d2d2d2;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:hover{
+      background: linear-gradient(to right, rgba(59,110,255, .03), rgba(59,110,255, .2));
+    }
+  }
+  .arco-icon-hover{
+    display: none;
+  }
+  .arco-collapse-item-header{
+    background-color: transparent;
+  }
+  .arco-collapse-item-header-title{
+    width: 100%;
+    padding: 35px 45px;
+    font-size: 20px;
+    font-weight: bold !important;
+    >div{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      >img{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .arco-collapse-item-content{
+    background-color: transparent;
+    padding: 35px 45px;
+    font-size: 18px;
+    color: var(--page-text-404040);
+  }
+}

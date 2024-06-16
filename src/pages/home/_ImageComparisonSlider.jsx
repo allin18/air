@@ -21,9 +21,9 @@ function ImageComparisonSlider() {
 
     return (
         <div id="slider" className="beer-slider" data-beer-label="before" style={sliderStyle}>
-            <img src="images/home/diff.png" alt=""/>
+            <img src="images/home/after.png" alt=""/>
             <div className="beer-reveal" data-beer-label="after">
-                <img src="images/home/diff.png" alt=""/>
+                <img src="images/home/befor.png" alt=""/>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://your-docusaurus-site.example.com/air/blog"/>
     <subtitle>air API文档中心 Blog</subtitle>
-    <icon>https://your-docusaurus-site.example.com/air/img/favicon.png</icon>
+    <icon>https://your-docusaurus-site.example.com/air/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>https://your-docusaurus-site.example.com/air/blog/test</id>

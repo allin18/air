@@ -51,7 +51,10 @@ $initial-reveal: 50%;
     height: 100%;
     margin: 0;
     left: -1px;
-    width: calc(100% + 2px);
+    // =========================================================================================================修改
+    //width: calc(100% + 2px);
+    width: 100%;
+    // =========================================================================================================修改end
     cursor: pointer;
     -webkit-appearance: slider-horizontal!important;
     -moz-appearance:none;
