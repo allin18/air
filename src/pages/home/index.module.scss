@@ -19,8 +19,8 @@
     font-weight: bold;
     font-style: italic;
     > img {
-      width: 60px;
-      margin-right: 20px;
+      width: 40px;
+      margin-right: 15px;
     }
     margin-right: 58px;
   }
@@ -43,7 +43,7 @@
         width: 12px;
         margin-left: 8px;
       }
-      &:last-child {
+      &:hover {
         color: rgba(255, 255, 255, 0.6);
       }
       &:hover div{
@@ -55,11 +55,11 @@
         opacity: 0;
         position: absolute;
         left: 0;
-        top: 130px;
+        top: 85px;
         width: 100%;
         z-index: 1;
-        height: 100px;
-        background-color: rgba(33, 33, 33, 0.2);
+        height: 65px;
+        background-color: rgba(33, 33, 33, 0.8);
         //background-color: red;
         border-bottom-left-radius: 60px;
         border-bottom-right-radius: 60px;
@@ -72,14 +72,14 @@
         >a{
           height: 100%;
           border-radius: 50px;
-          width: 360px;
+          width: 240px;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #fffefe;
           font-weight: normal;
           text-decoration: none;
-          font-size: 30px;
+          font-size: 20px;
           &.on{
             background-color: rgba(255, 255, 255, 0.15);
           }
@@ -97,15 +97,14 @@
       margin-right: 20px;
       position: relative;
       >img{
-        width: 33px;
+        width: 28px;
       }
       >span{
         position: absolute;
-        top: 3px;
+        top: 4px;
         left: 0;
         width: 100%;
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 10px;
         text-align: center;
       }
       cursor: pointer;
@@ -354,11 +353,11 @@ button.homeButton {
   background: #222222;
   > div {
     >p{
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1;
     }
     > h3 {
-      font-size: 38px;
+      font-size: 32px;
       line-height: 1;
       font-weight: bold;
     }

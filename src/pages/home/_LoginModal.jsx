@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
             width: 360px;
             height: 50px;
             padding: 0 18px;
-            font-size: 20px;
+            font-size: 15px;
             outline: none;
             border-radius: 8px;
             border: 2px solid var(--page-border-b2b2b2);
@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
                         //width: 360px;
                         //height: 50px;
                         padding: 0 18px;
-                        font-size: 20px;
+                        font-size: 15px;
                         outline: none !important;
                         //border-radius: 8px;
                         //border: 2px solid var(--page-border-b2b2b2);
@@ -88,7 +88,7 @@ const GlobalStyle = createGlobalStyle`
                     width: 50px;
                     background-color: transparent;
                     text-align: center;
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: bold;
                     border: 0;
                     border-left: 2px solid var(--page-border-b2b2b2);
@@ -116,7 +116,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--page-bg-000);
         width: 360px;
         height: 50px;
-        font-size: 25px;
+        font-size: 18px;
         cursor: pointer;
         border: 0;
     }
@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: transparent;
         width: 360px;
         height: 50px;
-        font-size: 25px;
+        font-size: 18px;
         cursor: pointer;
         border: 2px solid var(--page-bg-000);
     }
@@ -138,7 +138,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: var(--page-btn-disabled);
         width: 360px;
         height: 50px;
-        font-size: 25px;
+        font-size: 18px;
         cursor: pointer;
         border: 0;
     }
@@ -196,7 +196,7 @@ const LoginModal = forwardRef((props, ref) => {
                     <div>
                         <div className='LoginModal-title myCenter' style={{height: 80}}>
                             <h3 style={{
-                                fontSize: 32,
+                                fontSize: 24,
                                 fontWeight: 'bold',
                                 color: 'var(--page-text-FFF)',
                             }}>通行证</h3>
@@ -212,12 +212,12 @@ const LoginModal = forwardRef((props, ref) => {
                             }} onClick={()=>setVisible(false)}></span>
                         </div>
                         <div className='LoginModal-content' style={{height: 440, width: 360, margin: "auto"}}>
-                            <h6 style={{height: 55}}></h6>
+                            <h6 style={{height: 41}}></h6>
                             <Input
                                 className={'ipt'}
                                 placeholder='电子邮箱/手机号'
                             />
-                            <h6 style={{height: 30}}></h6>
+                            <h6 style={{height: 23}}></h6>
                             <Input.Password
                                 className={'ipt-group'}
                                 addAfter='?'
@@ -225,9 +225,9 @@ const LoginModal = forwardRef((props, ref) => {
                             />
                             <h6 style={{height: 8}}></h6>
                             <Checkbox>记住账号</Checkbox>
-                            <h6 style={{height: 47}}></h6>
+                            <h6 style={{height: 36}}></h6>
                             <button className={'b1'}>开始</button>
-                            <h6 style={{height: 30}}></h6>
+                            <h6 style={{height: 23}}></h6>
                             <button className={'b2'} onClick={() => setMode(2)}>注册</button>
                         </div>
                     </div>
@@ -237,7 +237,7 @@ const LoginModal = forwardRef((props, ref) => {
                     <div>
                         <div className='LoginModal-title myCenter' style={{height: 80}}>
                             <h3 style={{
-                                fontSize: 32,
+                                fontSize: 24,
                                 fontWeight: 'bold',
                                 color: 'var(--page-text-FFF)',
                             }}>注册</h3>
@@ -253,14 +253,14 @@ const LoginModal = forwardRef((props, ref) => {
                             }} onClick={()=>setVisible(false)}></span>
                         </div>
                         <div className='LoginModal-content' style={{height: 440, width: 360, margin: "auto"}}>
-                            <h6 style={{height: 55}}></h6>
+                            <h6 style={{height: 41}}></h6>
                             <div className={'myCenter'} style={{
                                 height: 50,
                                 width: 360,
                                 margin: "auto",
                                 border: '2px solid var(--page-border-b2b2b2)',
                                 borderRadius: 8,
-                                fontSize: 22,
+                                fontSize: 15,
                                 color: 'var(--page-text-808080)',
                                 cursor: 'pointer',
                             }} onClick={() => setMode(3)}>
@@ -268,7 +268,7 @@ const LoginModal = forwardRef((props, ref) => {
                             </div>
                             <h6 style={{height: 23}}></h6>
                             <span className={'myCenter'} style={{
-                                fontSize: 25,
+                                fontSize: 15,
                                 lineHeight: 1,
                                 color: 'var(--page-text-b2b1b1)',
                             }}>或</span>
@@ -296,7 +296,7 @@ const LoginModal = forwardRef((props, ref) => {
                     <div>
                         <div className='LoginModal-title myCenter' style={{height: 80}}>
                             <h3 style={{
-                                fontSize: 32,
+                                fontSize: 24,
                                 fontWeight: 'bold',
                                 color: 'var(--page-text-FFF)',
                             }}>注册</h3>
@@ -312,7 +312,7 @@ const LoginModal = forwardRef((props, ref) => {
                             }} onClick={()=>setVisible(false)}></span>
                         </div>
                         <div className='LoginModal-content' style={{height: 440, width: 360, margin: "auto"}}>
-                            <h6 style={{height: 55}}></h6>
+                            <h6 style={{height: 41}}></h6>
                             <div style={{position: 'relative'}}>
                                 <Input className={'phone'} style={{
                                     width: 360,
@@ -321,7 +321,7 @@ const LoginModal = forwardRef((props, ref) => {
                                     borderRadius: 8,
                                     outline: 'none',
                                     paddingLeft: 120,
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     border: '2px solid var(--page-border-b2b2b2)',
                                 }}
                                        placeholder='手机号'
@@ -334,12 +334,12 @@ const LoginModal = forwardRef((props, ref) => {
                                     left: 0,
                                     width: 100,
                                     height: 50,
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     color: 'var(--page-text-808080)'
                                 }}>+86 <IconCaretDown style={{color: 'var(--page-text-808080)', marginLeft: 10}}/>
                                 </span>
                             </div>
-                            <h6 style={{height: 30}}></h6>
+                            <h6 style={{height: 23}}></h6>
                             <div className={'myRow'} style={{justifyContent: "flex-start"}}>
                                 <Input style={{
                                     width: 142,
@@ -349,7 +349,7 @@ const LoginModal = forwardRef((props, ref) => {
                                     border: 0,
                                     outline: 'none',
                                     padding: "0 16px",
-                                    fontSize: 20,
+                                    fontSize: 15,
                                 }}
                                    placeholder=''
                                    value={code}
@@ -361,11 +361,11 @@ const LoginModal = forwardRef((props, ref) => {
                                     height: 50,
                                     backgroundColor: 'var(--page-input-bg-code-btn-bg)',
                                     borderRadius: 8,
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     color: 'var(--page-text-808080)'
                                 }}>发送验证码</span>
                             </div>
-                            <h6 style={{height: 30}}></h6>
+                            <h6 style={{height: 23}}></h6>
                             <Input.Password
                                 className={'ipt-group'}
                                 placeholder='密码'
