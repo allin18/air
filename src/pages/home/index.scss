@@ -13,7 +13,11 @@
       margin-bottom: 0;
     }
     &:hover{
-      background: linear-gradient(to right, rgba(59,110,255, .03), rgba(59,110,255, .2));
+      .arco-collapse-item-header-title{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background: linear-gradient(to right, rgba(59,110,255, .03), rgba(59,110,255, .2));
+      }
     }
   }
   .arco-icon-hover{
@@ -24,7 +28,7 @@
   }
   .arco-collapse-item-header-title{
     width: 100%;
-    padding: 31px 39px;
+    padding: 29px 39px;
     font-size: 18px;
     font-weight: bold !important;
     >div{
