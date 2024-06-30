@@ -19,15 +19,24 @@ export default function Home() {
     }
   };
 
+  const clickStart = () => {
+    var targetElement = document.getElementById('bannerCovert');
+    var offsetTop = targetElement.offsetTop; // 获取元素距离其offsetParent顶部的距离
+    window.scrollTo({
+      top: offsetTop, // 滚动到目标元素的顶部位置
+      behavior: 'smooth' // 平滑滚动（可选）
+    });
+  };
+
   return (
       <div className="page">
         <div className={styles.contentBlack141414}>
           <div className="w-1440">
             <div className={clsx('w-1280', styles.header)}>
-              <div>
+              <a href={'/air/'}>
                 <img src="img/logo.svg"/>
                 Turbulence
-              </div>
+              </a>
               <ul>
                 <li>
                   压缩
@@ -79,10 +88,10 @@ export default function Home() {
                 <h6 style={{height: 40}}></h6>
                 <p>我们致力于数字格式的无缝转化</p>
                 <h6 style={{height: 81}}></h6>
-                <button>开始</button>
+                <button onClick={()=>clickStart()}>开始</button>
               </div>
             </div>
-            <div className={clsx('col w-1280', styles.contentCovert)}>
+            <div id={'bannerCovert'} className={clsx('col w-1280', styles.contentCovert)}>
               <div className='col'>
                 <h6 style={{height: 29}}></h6>
                 <h3>文件转换器</h3>
