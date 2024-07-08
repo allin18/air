@@ -1,0 +1,114 @@
+.contentBlack {
+  background-color: #000;
+  color: #fff;
+}
+.covert-content{
+  height: calc(100vh - 153px);
+  padding-top: 75px;
+}
+
+
+.covert-content-box {
+  width: 100%;
+  background: #222222;
+  border-radius: 18px;
+  .covert-content-box-title {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 30px;
+    > button {
+      width: 180px;
+      height: 60px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border: 0 !important;
+    }
+  }
+  >ul{
+    width: 100%;
+    >li{
+      width: 100%;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      .covert-content-box-ul-li-thumbnail{
+        width: 40px;
+        margin-right: 25px;
+      }
+      .covert-content-box-ul-div{
+        flex: 1;
+        h4{
+          font-size: 14px;
+          font-weight: bold;
+          color: #000000;
+          line-height: 1;
+        }
+        p{
+          font-size: 12px;
+          color: var(--page-text-808080);
+          line-height: 1;
+          padding-top: 10px;
+        }
+      }
+      >button{
+        width: 90px;
+        height: 34px;
+        background-color: #323232;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFFFFF;
+      }
+      .covert-content-box-ul-li-close{
+        margin-left: 20px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  #covert-content-box-drop_file{
+    width: 100%;
+    height: 300px;
+  }
+  .covert-content-box-footer{
+    width: 100%;
+    height: 120px;
+  }
+  .covert-content-box-footer-div{
+    flex: 1;
+    padding: 35px 30px;
+    display: flex;
+    align-items: center;
+    .covert-content-box-footer-add{
+      width: 180px;
+      height: 50px;
+      border: var(--border-2);
+      border-radius: 10px;
+      background-color: #222222;
+      font-size: 16px;
+      color: var(--page-text-FFF);
+      line-height: 45px;
+      margin-right: 10px;
+    }
+    img{
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+    }
+  }
+  .covert-content-box-footer-submit{
+    width: 210px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 120px;
+    border: 0;
+    background-color: var(--page-modal-close);
+    color: var(--page-text-FFF);
+    border-bottom-right-radius: 18px;
+  }
+}

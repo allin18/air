@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState, useRef, useCallback } from 'react';
+import React, {useState, useRef, useCallback, useEffect} from 'react';
 
 import { Collapse } from '@arco-design/web-react';
 const CollapseItem = Collapse.Item;
@@ -9,6 +9,8 @@ import './index.scss';
 import styles from './index.module.scss';
 import ImageComparisonSlider from "./_ImageComparisonSlider";
 import LoginModal from "./_LoginModal";
+import Header from "../_common/_header";
+import Statistic from "../_common/_statistic";
 
 export default function Home() {
   const refLoginModal = useRef();
@@ -28,54 +30,14 @@ export default function Home() {
     });
   };
 
+  useEffect(() => {
+
+  }, []);
+
+
   return (
       <div className="page">
-        <div className={styles.contentBlack141414}>
-          <div className="w-1440">
-            <div className={clsx('w-1280', styles.header)}>
-              <a href={'/air/'}>
-                <img src="img/logo.svg"/>
-                Turbulence
-              </a>
-              <ul>
-                <li>
-                  压缩
-                  <img src="images/home/下拉箭头1.svg" alt=""/>
-                  <div>
-                    <a className={styles.on} href="">图像压缩</a>
-                    <a href="">视频压缩</a>
-                    <a href="">文件压缩</a>
-                    <a href="">音频压缩</a>
-                  </div>
-                </li>
-                <li>
-                  转换
-                  <img src="images/home/下拉箭头1.svg" alt=""/>
-                  <div>
-                    <a className={styles.on} href="">文档转换</a>
-                    <a href="">图像转换</a>
-                    <a href="">视频转换</a>
-                    <a href="">音频转换</a>
-                  </div>
-                </li>
-                <li>OCR</li>
-                <li>API</li>
-                <li>定价</li>
-                <li>支持</li>
-              </ul>
-              <div>
-                <div>
-                  <img src="images/home/文件夹icon.svg"/>
-                  <span>66</span>
-                </div>
-                <div>
-                  <img src="images/home/语言icon.svg"/>
-                </div>
-                <button className={styles.homeButton} onClick={() => openLogin(1)}>登录</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Header></Header>
         <div className={styles.contentBlack}>
           <div className="w-1440">
             <div className={clsx('w-1280', styles.contentBanner)}>
@@ -98,7 +60,7 @@ export default function Home() {
                 <h6 style={{height: 44}}></h6>
                 <div className='col'>
                   <h6 style={{height: 54}}></h6>
-                  <button>选择文件</button>
+                  <button onClick={() => location.href = '/air/convert'}>选择文件</button>
                   <h6 style={{height: 13}}></h6>
                   <p>最多50个，每个最大10MB或 <a style={{cursor: 'pointer'}} onClick={() => openLogin(2)}>注册</a></p>
                 </div>
@@ -242,13 +204,7 @@ export default function Home() {
           <br/>
           <br/>
         </div>
-        <div className={styles.contentBlack}>
-          <ul className={clsx('row w-1280', styles.contentCount)}>
-            <li><span style={{marginLeft: 0}}>32</span>服务器</li>
-            <li>已在线转换文件<span>77777</span>个</li>
-            <li>已在线转换文件<span>999999</span>GB</li>
-          </ul>
-        </div>
+        <Statistic></Statistic>
         <LoginModal ref={refLoginModal} ></LoginModal>
       </div>
   );
