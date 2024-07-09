@@ -6,7 +6,7 @@
     "start--0.0.0.0--no-open": "docusaurus start --host 0.0.0.0 --no-open",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build && git add . && git commit -m "auto" && git push",
+    "build": "docusaurus build && git add . && git commit -m \"auto\" && git push",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
