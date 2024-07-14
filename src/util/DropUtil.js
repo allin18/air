@@ -4,7 +4,7 @@ export default class DropUtil{
     static html(langCode,langDataMap){
         return `
         <div id="drop_zone" style="height: 100%;border: 2px dashed #bbb;border-radius: 5px;padding: 16px;background: white;transition: border-color 0.5s;text-align: center;position: relative;overflow: hidden;">
-            <input type="file" style="position:absolute; top: -100px" id="drop_picker">
+            <input type="file" multiple accept=".png,.jpg,.jpeg,.gif" style="position:absolute; top: -100px" id="drop_picker">
             <div id="drop_zone_tips"
                 style="position: absolute;top: 0;left: 0;width:100%;height:100%;display: flex;align-items: center;justify-content: center;background: rgba(255, 255, 255,.9);cursor: pointer;z-index: 1;">
                 <div style="text-align: left;">
@@ -31,8 +31,12 @@ export default class DropUtil{
     drop_picker;
     drop_content;
     onChange;
+    needStyle = true; // 是否需要默认样式
     constructor(opt) {
         this.onChange = opt.onChange || function (){};
+        if(typeof opt.needStyle === 'boolean'){
+            this.needStyle = opt.needStyle
+        }
         /// 获取节点 设置内容
         if(opt.el && opt.theme === undefined){
             /// 无样式 仅支持拖拽 不支持点击
@@ -47,6 +51,8 @@ export default class DropUtil{
             opt.el.style.position = 'relative';
             const ipt =  document.createElement('input');
             ipt.type = 'file';
+            ipt.multiple = 'true';
+            ipt.accept = '.png,.jpg,.jpeg,.gif'
             ipt.id  = 'drop_picker';
             ipt.style.position = 'absolute';
             ipt.style.top = '0';
@@ -56,6 +62,7 @@ export default class DropUtil{
             ipt.style.opacity = '0';
             ipt.style.zIndex = '1';
             ipt.style.cursor = 'pointer';
+            ipt.style.display = 'none';
             opt.el.appendChild(ipt);
             this.drop_zone = opt.el;
             this.drop_picker = ipt;
@@ -120,8 +127,11 @@ export default class DropUtil{
         this.drop_picker.dispatchEvent(e)
     }
     fileOpen(event){
-        this.drop_zone_tips.style.zIndex = 'initial';
-        this.drop_zone.style.border = '2px dashed #bbb';
+        if(this.needStyle){
+            // if(this.drop_zone_tips){} TODO 等一个需要这个的实例出现 再加
+            this.drop_zone_tips.style.zIndex = 'initial';
+            this.drop_zone.style.border = '2px dashed #bbb';
+        }
          this.getAllFiles(event).then(fs=>{
              this.onChange(fs,this.drop_content);
          });

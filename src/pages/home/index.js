@@ -11,6 +11,7 @@ import ImageComparisonSlider from "./_ImageComparisonSlider";
 import LoginModal from "./_LoginModal";
 import Header from "../_common/_header";
 import Statistic from "../_common/_statistic";
+import {Compresses} from "../convert";
 
 export default function Home() {
   const refLoginModal = useRef();
@@ -54,18 +55,7 @@ export default function Home() {
               </div>
             </div>
             <div id={'bannerCovert'} className={clsx('col w-1280', styles.contentCovert)}>
-              <div className='col'>
-                <h6 style={{height: 29}}></h6>
-                <h3>文件转换器</h3>
-                <h6 style={{height: 44}}></h6>
-                <div className='col'>
-                  <h6 style={{height: 54}}></h6>
-                  <button onClick={() => location.href = '/air/convert'}>选择文件</button>
-                  <h6 style={{height: 13}}></h6>
-                  <p>最多50个，每个最大10MB或 <a style={{cursor: 'pointer'}} onClick={() => openLogin(2)}>注册</a></p>
-                </div>
-                <h6 style={{height: 97}}></h6>
-              </div>
+              <Compresses></Compresses>
             </div>
           </div>
         </div>
