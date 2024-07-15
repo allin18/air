@@ -123,6 +123,11 @@
             font-weight: bold;
             color: #000000;
             line-height: 1;
+            width: 331px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
           }
 
           p {
@@ -184,6 +189,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             >img{
               width: 15px;
               margin-right: 18px;
@@ -266,6 +272,7 @@
       width: 40px;
       height: 40px;
       margin-left: 10px;
+      cursor: pointer;
     }
   }
 
@@ -278,5 +285,121 @@
     background-color: var(--page-modal-close);
     color: var(--page-text-FFF);
     border-bottom-right-radius: 18px;
+  }
+}
+
+.ConversionsPicker-btn{
+  .arco-popover-content{
+    border: 0;
+  }
+  .arco-popover-arrow.arco-trigger-arrow{
+    background-color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+  }
+}
+.ConversionsPicker-btn-btn{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: transparent ;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  >img{
+    margin-left: 15px;
+  }
+}
+.ConversionsPicker{
+  width: 340px;
+  height: 290px;
+  background-color: #1a1a1a;
+  padding-left: 20px;
+  .arco-tabs-header-nav{
+    padding-top: 20px;
+  }
+  .arco-tabs-content-vertical{
+    padding-left: 0;
+  }
+  .arco-tabs-header-ink{
+    display: none;
+  }
+  .arco-tabs-header-nav-vertical::before{
+    display: none;
+  }
+  .arco-tabs-header-title{
+    color: #FFFFFF;
+    opacity: 0.5;
+    width: 55px;
+    height: 30px;
+    padding: 0 !important;
+    font-size: 14px;
+  }
+  .arco-tabs-header-title-active,
+  .arco-tabs-header-title-active:hover{
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  .arco-tabs-header-title:hover{
+    opacity: 1;
+  }
+  .arco-tabs-header-nav-line .arco-tabs-header-title:hover .arco-tabs-header-title-text::before{
+    background-color: transparent;
+    color: #FFFFFF;
+  }
+  .arco-tabs-header-title-text{
+    border-bottom: 1px solid rgba(77,77,77, 0.5);
+    opacity: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .arco-tabs-header-title-active .arco-tabs-header-title-text,
+  .arco-tabs-header-title-active:hover .arco-tabs-header-title-text{
+    border-bottom: 1px solid rgba(77,77,77, 1);
+  }
+  ul{
+    display: flex;
+    flex-flow: wrap;
+    padding: 20px calc((100% - 220px) / 2) 10px;
+    height: 290px;
+    overflow-y: scroll;
+    /* 针对整个滚动条 */
+    &::-webkit-scrollbar {
+      width: 5px; /* 滚动条的宽度 */
+      height: 5px; /* 对于垂直滚动条，这是滚动条的高度 */
+    }
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      background: #4c4c4c; /* 滑块的颜色 */
+      border-radius: 2px; /* 滑块的圆角 */
+    }
+    /* 滚动条轨道 */
+    &::-webkit-scrollbar-track {
+      background: #1a1a1a; /* 轨道的颜色 */
+      border-radius: 2px; /* 轨道的圆角 */
+    }
+    /* 当鼠标悬停在滑块上时 */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* 滑块悬停时的颜色 */
+    }
+    li{
+      width: 60px;
+      height: 30px;
+      background-color: #333333;
+      color: #fff;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+    }
   }
 }

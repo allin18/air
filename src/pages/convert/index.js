@@ -1,5 +1,8 @@
 import clsx from 'clsx';
 import React, {useState, useRef, useCallback, useEffect} from 'react';
+import {Popover, Button} from '@arco-design/web-react';
+import { Tabs } from '@arco-design/web-react';
+const TabPane = Tabs.TabPane;
 
 import '../../css/page.scss';
 import './index.scss';
@@ -13,6 +16,7 @@ import {getRandomInt} from "../../util/RandomUtil";
 import {uploadFile} from "../../util/UploadFile";
 import {Queues, Task} from "../../util/Queues";
 import FileUtil, {calculateFileSizeInMB} from "../../util/FileUtil";
+import ImageUtil from "../../util/ImageUtil";
 
 export default function PageCommonEntry() {
     const title = `首页 from `;
@@ -85,9 +89,11 @@ export class Compresses extends React.Component {
         tasks: [],
         haveFiles: false,
         size: 0,
+        conversionsType: '',
     };
 
     dropUtil;
+
     // 组件被挂载到DOM上之后立即被调用
     componentDidMount() {
         this.dropUtil = new DropUtil({
@@ -214,6 +220,10 @@ export class Compresses extends React.Component {
         FileUtil.zipDownload(files);
     }
 
+    onChange(value) {
+        console.log(value)
+    }
+
     render() {
         return (
             <div id={'drop_file'} style={{width: '100%'}}>
@@ -243,7 +253,9 @@ export class Compresses extends React.Component {
                                 Ready
                                 <span>{this.state.tasks.length} files | {this.state.size} MB TOTAL</span>
                             </h3>
-                            <button onClick={()=>this.downloadAll()}><img src="images/covert/icon_download_all.svg" alt=""/>下载所有文件</button>
+                            <button onClick={() => this.downloadAll()}><img src="images/covert/icon_download_all.svg"
+                                                                            alt=""/>下载所有文件
+                            </button>
                         </div>
                         <h6 style={{height: 25}}></h6>
                         {
@@ -264,7 +276,7 @@ export class Compresses extends React.Component {
                                                 <div className={'covert-content-box-ul-div-to'}>
                                                     至
                                                     <div className={'covert-content-box-ul-div-select'}>
-
+                                                        <ConversionsPicker onChange={this.onChange}></ConversionsPicker>
                                                     </div>
                                                 </div>
                                             }
@@ -318,7 +330,7 @@ export class Compresses extends React.Component {
                                                             item.data.progress2 === 100
                                                         )
                                                     ) &&
-                                                    <button>
+                                                    <button onClick={() => ImageUtil.download(item.data)}>
                                                         <img src="images/covert/icon_download.svg" alt=""/>
                                                         PNG
                                                     </button>
@@ -345,7 +357,8 @@ export class Compresses extends React.Component {
 
                         <div className={'row covert-content-box-footer'}>
                             <div className={'covert-content-box-footer-div'}>
-                                <button className={'row covert-content-box-footer-add'} onClick={()=>this.dropUtil.open()}>
+                                <button className={'row covert-content-box-footer-add'}
+                                        onClick={() => this.dropUtil.open()}>
                                     <img src="images/covert/icon_add.svg" alt=""/>
                                     添加更多文件
                                 </button>
@@ -360,6 +373,126 @@ export class Compresses extends React.Component {
                 }
             </div>
 
+        );
+    }
+}
+
+export class ConversionsPicker extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+    state = {
+        visible: false,
+        type: '',
+    }
+    options = {
+        '图像': [
+            'PNG',
+            'JPG',
+            'GIF',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+            'ICO',
+        ],
+        '视频': [
+            'AVI',
+            'MP4',
+            'MKV',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+            'WEBM',
+        ],
+        '文档': [
+            'PDF',
+            'PDF',
+            '7z',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+            'ZIP',
+        ],
+    }
+    onChange(type){
+        this.state.type = type;
+        this.props.onChange(type);
+        this.onHide()
+    }
+    onShow(){
+        this.state.visible = true;
+        this.setState({})
+    }
+    onHide(){
+        this.state.visible = false;
+        this.setState({})
+    }
+    render() {
+        return (
+            <Popover
+                popupVisible={this.state.visible}
+                trigger='click'
+                className={'ConversionsPicker-btn'}
+                content={
+                    <div className={'ConversionsPicker'}>
+                        <Tabs key='card' tabPosition={'left'}>
+                            {Object.keys(this.options).map(category => (
+                                <TabPane key={category} title={category}>
+                                    <ul>
+                                        {this.options[category].map(type => (
+                                            <li key={type} onClick={()=>this.onChange(type)}>{type}</li>
+                                        ))}
+                                    </ul>
+                                </TabPane>
+                            ))}
+                        </Tabs>
+                    </div>
+                }>
+                <button className={'ConversionsPicker-btn-btn'} onClick={()=>this.onShow()}>
+                    {
+                        this.state.type !== '' ? this.state.type : '···'
+                    }
+                    {/*<img src="images/covert/icon_arrow_right.svg" alt="" width={13}/>*/}
+                    <img src="images/covert/icon_img.svg" alt="" width={13}/>
+                </button>
+            </Popover>
         );
     }
 }

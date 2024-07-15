@@ -360,3 +360,9 @@ template {
 ul {
   list-style: none !important;
 }
+input::placeholder {
+  color: var(--page-text-placeholder);
+}
+button {
+  cursor: pointer;
+}

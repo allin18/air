@@ -67,7 +67,7 @@ export default class FileUtil {
         }
     }
 
-    static zipDownload(files) {
+    static async zipDownload(files) {
         // 初始化一个zip打包对象
         const zip = new JSZip();
         // // 创建一个被用来打包的名为Hello.txt的文件
@@ -76,8 +76,8 @@ export default class FileUtil {
         // var img = zip.folder("images");
         // // 这个images文件目录中创建一个base64数据为imgData的图像，图像名是smile.gif
         // img.file("smile.gif", imgData, {base64: true});
-        for (const file in files) {
-            // zip.file(file.name, imgData, {base64: true});
+        for (const file of files) {
+            zip.file(file.name, file, {base64: true});
         }
 
         const time = new Date().toLocaleString(undefined, {hour12: false}).replace(/\/|:|\s/g, '-');
@@ -86,15 +86,6 @@ export default class FileUtil {
             // content就是blob数据，这里以example.zip名称下载
             // 使用了FileSaver.js
             saveAs(content, `air-download-${time}.zip`);
-        });
-    }
-
-    static getBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = error => reject(error);
         });
     }
 }
