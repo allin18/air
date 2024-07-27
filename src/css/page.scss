@@ -62,6 +62,12 @@
     }
   }
 
+  .wrap {
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+  }
+
   .myCol {
     display: flex;
     flex-flow: column;

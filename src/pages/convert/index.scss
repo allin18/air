@@ -257,6 +257,7 @@
     padding: 35px 30px;
     display: flex;
     align-items: center;
+    position: relative;
 
     .covert-content-box-footer-add {
       width: 180px;
@@ -276,13 +277,65 @@
         margin-right: 18px;
       }
     }
-
-    img {
-      width: 40px;
-      height: 40px;
-      margin-left: 10px;
+    .covert-content-box-footer-div-share{
+      display: flex;
+      >img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+    .covert-content-box-footer-div-all{
+      position: absolute;
+      top: 14px;
+      left: 426px;
+      .ConversionsPicker-custom{
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        cursor: pointer;
+        >span{
+          opacity: 0.5;
+        }
+        >img{
+          width: 13px;
+          margin-left: 14px;
+        }
+      }
+    }
+    .covert-content-box-footer-div-switch{
+      position: absolute;
+      top: 14px;
+      left: 587px;
+      display: flex;
+      align-items: center;
+      line-height: 1;
       cursor: pointer;
-      opacity: 0.5;
+      >span{
+        opacity: 0.5;
+      }
+      .arco-switch{
+        width: 32px !important;
+        min-width: 32px !important;
+        height: 16px;
+        margin-right: 14px;
+      }
+      .arco-switch-dot {
+        width: 12px;
+        height: 12px;
+        top: 2px;
+        left: 2px;
+        background-color: #c5c5c5;
+        border: 2px solid #FFFFFF;
+      }
+      .arco-switch-checked {
+        background-color: #000000;
+        .arco-switch-dot {
+          left: calc(100% - 12px - 2px);
+        }
+      }
     }
   }
 
@@ -330,8 +383,30 @@
   height: 290px;
   background-color: #1a1a1a;
   padding-left: 20px;
+  ul{
+    overflow-y: scroll;
+    /* 针对整个滚动条 */
+    &::-webkit-scrollbar {
+      width: 5px; /* 滚动条的宽度 */
+      height: 5px; /* 对于垂直滚动条，这是滚动条的高度 */
+    }
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      background: #4c4c4c; /* 滑块的颜色 */
+      border-radius: 2px; /* 滑块的圆角 */
+    }
+    /* 滚动条轨道 */
+    &::-webkit-scrollbar-track {
+      background: #1a1a1a; /* 轨道的颜色 */
+      border-radius: 2px; /* 轨道的圆角 */
+    }
+    /* 当鼠标悬停在滑块上时 */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; /* 滑块悬停时的颜色 */
+    }
+  }
   .arco-tabs-header-nav{
-    padding-top: 20px;
+    padding-top: 12px;
   }
   .arco-tabs-content-vertical{
     padding-left: 0;
@@ -346,9 +421,10 @@
     color: #FFFFFF;
     opacity: 0.5;
     width: 55px;
-    height: 30px;
+    height: 40px;
     padding: 0 !important;
     font-size: 14px;
+    margin-top: 0 !important;
   }
   .arco-tabs-header-title-active,
   .arco-tabs-header-title-active:hover{
@@ -375,33 +451,75 @@
   .arco-tabs-header-title-active:hover .arco-tabs-header-title-text{
     border-bottom: 1px solid rgba(77,77,77, 1);
   }
-  ul{
+  .ConversionsPicker-mask{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+  .ConversionsPicker-search{
+    padding-top: 8px;
+    padding-right: 20px;
+    position: relative;
+    //>img{
+    //  width: 14px;
+    //}
+    >input{
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #4d4d4d;
+      width: 100%;
+      height: 40px;
+      padding-left: 26px;
+      caret-color: #ffffff; // 插入光标的颜色
+      color: #ffffff;
+      &::placeholder{
+        color: #808080;
+      }
+    }
+    .ConversionsPicker-search-close{
+      position: absolute;
+      top: 8px;
+      right: 20px;
+      width: 14px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  .ConversionsPicker-search-result{
     display: flex;
     flex-flow: wrap;
-    padding: 20px calc((100% - 220px) / 2) 10px;
-    height: 290px;
-    overflow-y: scroll;
-    /* 针对整个滚动条 */
-    &::-webkit-scrollbar {
-      width: 5px; /* 滚动条的宽度 */
-      height: 5px; /* 对于垂直滚动条，这是滚动条的高度 */
+    align-content: flex-start;
+    padding-top: 20px;
+    padding-right: 20px;
+    height: 232px;
+    >li{
+      width: calc((100% - 30px) / 3);
+      height: 30px;
+      background-color: #333333;
+      color: #fff;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
     }
-    /* 滚动条滑块 */
-    &::-webkit-scrollbar-thumb {
-      background: #4c4c4c; /* 滑块的颜色 */
-      border-radius: 2px; /* 滑块的圆角 */
-    }
-    /* 滚动条轨道 */
-    &::-webkit-scrollbar-track {
-      background: #1a1a1a; /* 轨道的颜色 */
-      border-radius: 2px; /* 轨道的圆角 */
-    }
-    /* 当鼠标悬停在滑块上时 */
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555; /* 滑块悬停时的颜色 */
-    }
+  }
+  .ConversionsPicker-options-default{
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+    padding: 20px calc((100% - 220px) / 2) 10px; // 220px是ul的宽度
+    height: 242px;
     li{
-      width: 60px;
+      width: calc((100% - 30px) / 3);
       height: 30px;
       background-color: #333333;
       color: #fff;
