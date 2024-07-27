@@ -71,6 +71,10 @@
         margin-top: 23px;
         display: block;
         font-size: 16px;
+        >em{
+          font-weight: normal;
+          font-style: normal;
+        }
       }
     }
 
@@ -87,6 +91,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border-bottom: 3px solid #bfbfbf !important;
       >img{
         width: 25px;
         margin-right: 15px;
@@ -190,6 +195,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            border: 0 !important;
             >img{
               width: 15px;
               margin-right: 18px;
@@ -212,6 +218,7 @@
         width: 100%;
         height: 1px;
         background-color: #e6e6e6;
+        overflow: hidden;
         > span {
           width: 0;
           height: 100%;
@@ -227,7 +234,9 @@
         left: 0;
         width: 0;
         height: 100%;
-        background: linear-gradient(to right, #ffffff, #e5ebfd);
+        //background: linear-gradient(to right, #ffffff, #e5ebfd);
+        // 从百分之50位置到100%位置的渐变
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #e5ebfd 100%);
         transition: width 0.5s ease-in-out;
       }
     }
@@ -273,6 +282,7 @@
       height: 40px;
       margin-left: 10px;
       cursor: pointer;
+      opacity: 0.5;
     }
   }
 
@@ -293,8 +303,9 @@
     border: 0;
   }
   .arco-popover-arrow.arco-trigger-arrow{
-    background-color: #1a1a1a;
-    border: 1px solid #1a1a1a;
+    display: none;
+    //background-color: #1a1a1a;
+    //border: 1px solid #1a1a1a;
   }
 }
 .ConversionsPicker-btn-btn{
@@ -305,6 +316,11 @@
   font-size: 14px;
   font-weight: bold;
   color: #000000;
+  >span{
+    color: #808080;
+    font-size: 20px;
+    font-weight: normal;
+  }
   >img{
     margin-left: 15px;
   }

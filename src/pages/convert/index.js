@@ -130,6 +130,13 @@ export class Compresses extends React.Component {
                                     if (percent === 100) {
                                         instance.successHandle();
                                     }
+                                    // 下面完成后 不显示进度线
+                                    if(instance.data.progress === 100) {
+                                        setTimeout(()=>{
+                                            instance.data.progress = 101;
+                                            this.setState({});
+                                        },500)
+                                    }
                                 },
                                 {
                                     'sessionId': '242f2f3f496d40d6b0e038ff46767eb2',
@@ -251,7 +258,7 @@ export class Compresses extends React.Component {
                         <div className={'row covert-content-box-title'}>
                             <h3>
                                 Ready
-                                <span>{this.state.tasks.length} files | {this.state.size} MB TOTAL</span>
+                                <span>{this.state.tasks.length} <em>files</em> | {this.state.size} MB <em>TOTAL</em></span>
                             </h3>
                             <button onClick={() => this.downloadAll()}><img src="images/covert/icon_download_all.svg"
                                                                             alt=""/>下载所有文件
@@ -341,7 +348,10 @@ export class Compresses extends React.Component {
                                                  onClick={() => this.clickRemove(index)}/>
                                         </div>
                                         <div className={'covert-content-box-ul-li-compresses'}>
-                                            <span style={{width: `${item.data.progress}%`}}></span>
+                                            {
+                                                item.data.progress !== 101 &&
+                                                <span style={{width: `${item.data.progress}%`}}></span>
+                                            }
                                         </div>
                                         <div className={'covert-content-box-ul-li-conversions'}
                                              style={{width: `${item.data.progress2}%`}}>
@@ -487,7 +497,7 @@ export class ConversionsPicker extends React.Component {
                 }>
                 <button className={'ConversionsPicker-btn-btn'} onClick={()=>this.onShow()}>
                     {
-                        this.state.type !== '' ? this.state.type : '···'
+                        this.state.type !== '' ? this.state.type : <span>···</span>
                     }
                     {/*<img src="images/covert/icon_arrow_right.svg" alt="" width={13}/>*/}
                     <img src="images/covert/icon_img.svg" alt="" width={13}/>
