@@ -129,11 +129,10 @@ export class Compresses extends React.Component {
                                     this.setState({});
                                     if (percent === 100) {
                                         instance.successHandle();
-                                    }
-                                    // 下面完成后 不显示进度线
-                                    if(instance.data.progress === 100) {
+
+                                        // 下面完成后 不显示进度线
                                         setTimeout(()=>{
-                                            instance.data.progress = 101;
+                                            instance.data.progressHide = true;
                                             this.setState({});
                                         },500)
                                     }
@@ -349,8 +348,10 @@ export class Compresses extends React.Component {
                                         </div>
                                         <div className={'covert-content-box-ul-li-compresses'}>
                                             {
-                                                item.data.progress !== 101 &&
-                                                <span style={{width: `${item.data.progress}%`}}></span>
+                                                item.data.progressHide ?
+                                                    null
+                                                    :
+                                                    <span style={{width: `${item.data.progress}%`}}></span>
                                             }
                                         </div>
                                         <div className={'covert-content-box-ul-li-conversions'}
@@ -499,8 +500,7 @@ export class ConversionsPicker extends React.Component {
                     {
                         this.state.type !== '' ? this.state.type : <span>···</span>
                     }
-                    {/*<img src="images/covert/icon_arrow_right.svg" alt="" width={13}/>*/}
-                    <img src="images/covert/icon_img.svg" alt="" width={13}/>
+                    <img src="images/covert/icon_arrow_down.svg" alt="" width={13}/>
                 </button>
             </Popover>
         );
