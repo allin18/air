@@ -6,6 +6,7 @@ import {createGlobalStyle} from 'styled-components';
 import {Checkbox} from '@arco-design/web-react';
 import {Input} from '@arco-design/web-react';
 import {IconCaretDown} from '@arco-design/web-react/icon';
+import {forgotPassword, login, register, updatePassword} from "../../util/http";
 
 const GlobalStyle = createGlobalStyle`
     /* 这里写你的全局CSS */
@@ -150,8 +151,8 @@ const LoginModal = forwardRef((props, ref) => {
     const [disabled, setDisabled] = React.useState(true);
 
     const [mode, setMode] = React.useState(1);
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [email, setEmail] = React.useState('526443791@qq.com');
+    const [password, setPassword] = React.useState('123456');
     const [phone, setPhone] = React.useState('');
     const [code, setCode] = React.useState('');
 
@@ -167,6 +168,22 @@ const LoginModal = forwardRef((props, ref) => {
             setVisible(false)
         },
     }));
+
+    function clickLogin() {
+        login(email, password);
+    }
+
+    function clickRegister() {
+        register(email, password);
+    }
+
+    function clickForgotPassword() {
+        forgotPassword(email);
+    }
+
+    function clickUpdatePassword() {
+        updatePassword(email, '654321');
+    }
 
     return (
         <>
@@ -216,17 +233,23 @@ const LoginModal = forwardRef((props, ref) => {
                             <Input
                                 className={'ipt'}
                                 placeholder='电子邮箱/手机号'
+                                value={email}
+                                onChange={(val) => setEmail(val)}
                             />
                             <h6 style={{height: 23}}></h6>
                             <Input.Password
                                 className={'ipt-group'}
                                 addAfter='?'
                                 placeholder='密码'
+                                value={password}
+                                onChange={(val) => setPassword(val)}
                             />
                             <h6 style={{height: 8}}></h6>
                             <Checkbox>记住账号</Checkbox>
                             <h6 style={{height: 36}}></h6>
-                            <button className={'b1'}>开始</button>
+                            <button className={'b1'} onClick={()=>clickLogin()}>开始</button>
+                            <button className={'b1'} onClick={()=>clickForgotPassword()}>忘记密码</button>
+                            <button className={'b1'} onClick={()=>clickUpdatePassword()}>修改密码</button>
                             <h6 style={{height: 23}}></h6>
                             <button className={'b2'} onClick={() => setMode(2)}>注册</button>
                         </div>
@@ -287,7 +310,7 @@ const LoginModal = forwardRef((props, ref) => {
                                 onChange={(val) => setPassword(val)}
                             />
                             <h6 style={{height: 30}}></h6>
-                            <button className={(email.length > 0 && password.length > 0) ? 'b1' :'disabled'}>创建账户</button>
+                            <button className={(email.length > 0 && password.length > 0) ? 'b1' :'disabled'} onClick={()=> clickRegister()}>创建账户</button>
                         </div>
                     </div>
                 }
