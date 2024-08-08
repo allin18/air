@@ -348,6 +348,9 @@
     background-color: var(--page-modal-close);
     color: var(--page-text-FFF);
     border-bottom-right-radius: 18px;
+    &:hover{
+      background-color: #5d5d5d;
+    }
   }
 }
 

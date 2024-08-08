@@ -8,7 +8,7 @@ import '../../css/page.scss';
 import './index.scss';
 import styles from './index.module.scss';
 import ImageComparisonSlider from "./_ImageComparisonSlider";
-import LoginModal from "./_LoginModal";
+import LoginModal from "../_login/_LoginModal";
 import Header from "../_common/_header";
 import Statistic from "../_common/_statistic";
 import {Compresses} from "../convert";

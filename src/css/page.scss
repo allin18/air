@@ -34,6 +34,7 @@
 
 .myPageHtmlClassName {
   @import "normalize"; // 只支持scss
+  @import "arco";
 
   min-width: max-content; // 重要 不然page只是屏幕的宽
 
@@ -115,4 +116,5 @@
     width: 1000px;
     margin: 0 auto;
   }
+
 }

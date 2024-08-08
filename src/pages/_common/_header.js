@@ -1,7 +1,7 @@
 import styles from "../home/index.module.scss";
 import clsx from "clsx";
 import React, {useRef} from "react";
-import LoginModal from "../home/_LoginModal";
+import LoginModal from "../_login/_LoginModal";
 
 export default function Header() {
     const refLoginModal = useRef();

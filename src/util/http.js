@@ -29,6 +29,10 @@ request.interceptors.response.use((response) => {
 
 
 /// ================================================================================================================API
+
+// 登录防刷 验证码图片
+// http://82.157.28.128:8999/compress_tool/user/code?timestamp=1111
+
 export function register(username, password) {
     const url = '/compress_tool/user/register';
     return request({
