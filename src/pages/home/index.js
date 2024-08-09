@@ -16,12 +16,6 @@ import {Compresses} from "../convert";
 export default function Home() {
   const refLoginModal = useRef();
 
-  const openLogin = (mode = 1) => {
-    if (refLoginModal.current) {
-      refLoginModal.current.open(mode); // 调用子组件的方法
-    }
-  };
-
   const clickStart = () => {
     var targetElement = document.getElementById('bannerCovert');
     var offsetTop = targetElement.offsetTop; // 获取元素距离其offsetParent顶部的距离
@@ -34,7 +28,6 @@ export default function Home() {
   useEffect(() => {
 
   }, []);
-
 
   return (
       <div className="page">
@@ -195,7 +188,7 @@ export default function Home() {
           <br/>
         </div>
         <Statistic></Statistic>
-        <LoginModal ref={refLoginModal} ></LoginModal>
+        <LoginModal></LoginModal>
       </div>
   );
 }

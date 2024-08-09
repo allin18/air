@@ -1,15 +1,13 @@
 import styles from "../home/index.module.scss";
 import clsx from "clsx";
 import React, {useRef} from "react";
-import LoginModal from "../_login/_LoginModal";
+
+import eventBus from "../../util/eventBus";
 
 export default function Header() {
-    const refLoginModal = useRef();
 
     const openLogin = (mode = 1) => {
-        if (refLoginModal.current) {
-            refLoginModal.current.open(mode); // 调用子组件的方法
-        }
+        eventBus.emit('login-popup', mode);
     };
 
     return (
@@ -58,7 +56,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <LoginModal ref={refLoginModal} ></LoginModal>
         </div>
     );
 }

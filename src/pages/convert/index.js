@@ -18,6 +18,7 @@ import {uploadFile} from "../../util/UploadFile";
 import {Queues, Task} from "../../util/Queues";
 import FileUtil, {calculateFileSizeInMB} from "../../util/FileUtil";
 import ImageUtil from "../../util/ImageUtil";
+import eventBus from "../../util/eventBus";
 
 export default function PageCommonEntry() {
     const title = `首页 from `;
@@ -240,6 +241,10 @@ export class Compresses extends React.Component {
         }
     }
 
+    openLogin(mode = 1) {
+        eventBus.emit('login-popup', mode);
+    }
+
     render() {
         return (
             <div id={'drop_file'} style={{width: '100%'}}>
@@ -254,7 +259,7 @@ export class Compresses extends React.Component {
                             <button onClick={() => this.dropUtil.open()}>选择文件</button>
                             <h6 style={{height: 13}}></h6>
                             <p>最多50个，每个最大10MB或 <a style={{cursor: 'pointer'}}
-                                                          onClick={() => openLogin(2)}>注册</a>
+                                                          onClick={() => this.openLogin(2)}>注册</a>
                             </p>
                         </div>
                         <h6 style={{height: 97}}></h6>

@@ -23,6 +23,7 @@
     "axios": "^1.7.2",
     "clsx": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
+    "eventemitter3": "^5.0.1",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
     "prism-react-renderer": "^2.3.0",
