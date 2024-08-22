@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkair_docs=self.webpackChunkair_docs||[]).push([[1270],{4254:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/compress_tool/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

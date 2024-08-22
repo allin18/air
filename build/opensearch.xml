@@ -4,8 +4,8 @@
   <ShortName>air API文档中心</ShortName>
   <Description>Search air API文档中心</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://your-docusaurus-site.example.com/air/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://your-docusaurus-site.example.com/air/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://your-docusaurus-site.example.com/air/opensearch.xml" />
-  <moz:SearchForm>https://your-docusaurus-site.example.com/air/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://your-docusaurus-site.example.com/compress_tool/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://your-docusaurus-site.example.com/compress_tool/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://your-docusaurus-site.example.com/compress_tool/opensearch.xml" />
+  <moz:SearchForm>https://your-docusaurus-site.example.com/compress_tool/</moz:SearchForm>
 </OpenSearchDescription>

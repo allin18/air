@@ -7,6 +7,7 @@
     "build-git-push": "docusaurus build && git add . && git commit -m \"auto\" && git push",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
